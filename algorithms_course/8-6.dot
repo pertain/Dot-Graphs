@@ -1,0 +1,56 @@
+graph coins {
+	node [shape=circle fontcolor=white style=filled fillcolor=black];
+	total [label="18"];
+	one1 [label="1"];
+	one2 [label="1"];
+	one3 [label="1"];
+	one4 [label="1"];
+	one5 [label="1"];
+	oneA [label="1"];
+	oneB [label="1"];
+	oneC [label="1"];
+	oneD [label="1"];
+	oneE [label="1"];
+	etc1 [shape=plaintext fontcolor=black style="" label="..."];
+	etc2 [shape=plaintext fontcolor=black style="" label="..."];
+	etc3 [shape=plaintext fontcolor=black style="" label="..."];
+	etc4 [shape=plaintext fontcolor=black style="" label="..."];
+	empty [shape=plaintext style="" label=" "];
+	six1 [label="6"];
+	six2 [label="6"];
+	six3 [label="6"];
+	six4 [label="6"];
+	ten [label="10"];
+	total--one1;
+	total--six1;
+	total--ten;
+	{rank=same;
+		one1--six1--ten [style=invis];
+	}
+	one1--one2;
+	six1--oneA;
+	six1--six2;
+	ten--oneB;
+	ten--six3;
+	{rank=same;
+		one2--oneA--six2--oneB--six3 [style=invis];
+	}
+	one2--one3;
+	oneA--oneC;
+	six2--oneD;
+	six2--six4;
+	oneB--oneE;
+	six3--one4;
+	{rank=same;
+		one3--oneC--oneD--six4--oneE--one4 [style=invis];
+	}
+	one3--etc1;
+	oneC--etc2;
+	oneD--etc3;
+	six4--empty [style=invis];
+	oneE--etc4;
+	one4--one5;
+	{rank=same;
+		etc1--etc2--etc3--empty--etc4--one5 [style=invis];
+	}
+}

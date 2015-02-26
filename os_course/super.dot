@@ -1,0 +1,36 @@
+/* super.dot
+ * 
+ * super.dot is a graph that shows the access control
+ * hierarchy of Linux.
+ */
+
+graph super {
+	node [constraint=false];
+	edge [style=invis];
+	Superuser [shape=tripleoctagon];
+	Superuser -- Owner;
+	Superuser -- Group;
+	Superuser -- Other;
+	subgraph cluster_users{
+		r1 [label="r"];
+		w1 [label="w"];
+		x1 [label="x"];
+		r2 [label="r"];
+		w2 [label="w"];
+		x2 [label="x"];
+		r3 [label="r"];
+		w3 [label="w"];
+		x3 [label="x"];
+		{rank=same; Owner -- Group -- Other};
+		edge [style=""];
+		Owner -- r1;
+		Owner -- w1;
+		Owner -- x1;
+		Group -- r2;
+		Group -- w2;
+		Group -- x2;
+		Other -- r3;
+		Other -- w3;
+		Other -- x3;
+	}
+}
