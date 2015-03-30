@@ -1,8 +1,8 @@
 graph mst {
-	node [shape=circle fontcolor=white style=filled fillcolor=black];
-	{rank=same;
-		A -- B [color=red label="2"];
-	}
-	B -- C [color=red label="3"];
-	C -- A [color=blue label="4"];
+    node [shape=circle fontcolor=white style=filled fillcolor=black];
+    {rank=same;
+        A -- B [color=red label="2"];
+    }
+    B -- C [color=red label="3"];
+    C -- A [color=blue label="4"];
 }

@@ -1,30 +1,30 @@
 digraph topo {
-	node [shape=circle fontcolor=white style=filled fillcolor=black];
-	{rank=same;
-		A -> B [color=red];
-		B -> C;
-	}
-	A -> D;
-	B -> D [color=red];
-	B -> E;
-	C -> F;
-	{rank=same;
-		D -> E [color=red];
-		E -> F;
-	}
-	D -> G;
-	E -> C [color=red];
-	E -> G;
-	F -> H;
-	edge [dir=back];
-	{rank=same;
-		G -> H [color=blue];
-	}
-	edge [dir=forward];
-	G -> F;
-	G -> I [color=blue];
-	H -> J;
-	{rank=same;
-		I -> J [color=blue];
-	}
+    node [shape=circle fontcolor=white style=filled fillcolor=black];
+    {rank=same;
+        A -> B [color=red];
+        B -> C;
+    }
+    A -> D;
+    B -> D [color=red];
+    B -> E;
+    C -> F;
+    {rank=same;
+        D -> E [color=red];
+        E -> F;
+    }
+    D -> G;
+    E -> C [color=red];
+    E -> G;
+    F -> H;
+    edge [dir=back];
+    {rank=same;
+        G -> H [color=blue];
+    }
+    edge [dir=forward];
+    G -> F;
+    G -> I [color=blue];
+    H -> J;
+    {rank=same;
+        I -> J [color=blue];
+    }
 }

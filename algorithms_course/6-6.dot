@@ -1,12 +1,12 @@
 graph mst {
-	node [shape=circle fontcolor=white style=filled fillcolor=black];
-	{rank=same;
-		T -- U [color=red label="a"];
-		U -- W [color=red label="b"];
-	}
-	W -- V [color=red label="c"];
-	U -- V [color=blue label="w"];
-	{rank=same;
-		V -- X [color=red label="d"];
-	}
+    node [shape=circle fontcolor=white style=filled fillcolor=black];
+    {rank=same;
+        T -- U [color=red label="a"];
+        U -- W [color=red label="b"];
+    }
+    W -- V [color=red label="c"];
+    U -- V [color=blue label="w"];
+    {rank=same;
+        V -- X [color=red label="d"];
+    }
 }
